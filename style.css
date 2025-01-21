@@ -67,6 +67,9 @@ main {
     animation-delay: 2s;
     animation-iteration-count: 2;
     animation-direction: alternate;
+    &:hover {
+        animation-play-state: paused;
+    }
 }
 
 
