@@ -47,16 +47,30 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: 10rem;
         padding: 2rem;
         .card-frame1, .card-frame2, .card-frame3 {
             background-color: var(--blue);
             width: auto;
             height: fit-content;
             padding:  2.5rem 2rem;
-            /* border-radius: .5rem; */
+            border-radius: .5rem;
+            animation-duration: 3s;
+            animation-name: spin;
         }
-   
+    }
+}
+
+ /* Animation-Keyframes */
+
+@keyframes spin {
+    0% {
+        
+    }
+    
+    100% {
+        transform: rotate(360deg);
+        border-radius: 50%;
     }
 }
 
