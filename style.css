@@ -50,6 +50,7 @@ main {
         align-items: center;
         gap: 10rem;
         padding: 2rem;
+        flex-wrap: wrap;
         .card-frame1, .card-frame2, .card-frame3 {
             justify-content: center;
             text-align: center;
