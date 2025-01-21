@@ -77,9 +77,10 @@ main {
 /* spin circle on 50% */
 
 .card-frame2 {
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-name: spincolor;
     animation-delay: 5s;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-direction: reverse;
     &:hover {
@@ -118,9 +119,12 @@ main {
     50% {
         background-color: var(--white);
         color: var(--secondary-color);
+        border-radius: 25%;
+        scale: 1.25;
     }
     100% {
         background-color: var(--header-black);
+        scale: 1;
     }
 }
 
