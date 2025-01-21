@@ -60,31 +60,36 @@ main {
 }
 
 
+/* spin circle on 50% */
+
 .card-frame1 {
     animation-duration: 3s;
     animation-name: spin;
     animation-timing-function: ease;
     animation-delay: 2s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-direction: normal;
 }
 
 
 
-/* Keyframes */
+/* KEYFRAMES */
+
+
+/* .card-frame1 */
 
 @keyframes spin {
     0% {
         
     }
     50% {
-        scale: 2;
+        scale: 1.25;
         transform: rotate(0);
+        border-radius: 50%;
     }
     100% {
         transform: rotate(360deg);
-        border-radius: 50%;
-        scale: 2;
+        scale: 1;
     }
 }
 
