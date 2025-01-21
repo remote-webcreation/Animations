@@ -90,18 +90,25 @@ main {
     animation-direction: reverse;
     &:hover {
         animation-play-state: paused;
+        cursor: pointer;
     }
 }
 
 /* spin circle on 50% combined in one line of code */
 
 .card-frame3 {
-    z-index: 10;
-    animation: 2s loading ease-in-out 8s infinite alternate;
+    animation: 3s loading ease-in-out 8s 1;
     &:hover {
         animation-play-state: paused;
+        cursor: pointer;
+    }
+    h4 {
+        display: block;
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
     }
 }
+
 
 
 
@@ -130,14 +137,12 @@ main {
 @keyframes spincolor {
     0% {
         color: var(--white);
-        cursor: pointer;
     }
     50% {
         background-color: var(--white);
         color: var(--secondary-color);
         border-radius: 25%;
         scale: 1.25;
-        cursor: pointer;
     }
     100% {
         background-color: var(--header-black);
@@ -151,25 +156,28 @@ main {
 @keyframes loading {
     0% {
         transform: rotateX(0deg) rotateY(0) rotateZ(0);
-        cursor: pointer;
     }
     33% {
         transform: rotateX(180deg) rotateY(0) rotateZ(0);
-        cursor: pointer;
         background-color: rgba(0, 0, 0, 0);
         box-shadow: 0 0 8px var(--white), inset 0 0 8px var(--white);
         border: .375rem solid var(--white);
+        scale: 0.75;
     }
+
+
     67% {
         transform: rotateX(180deg) rotateY(180deg) rotateZ(0);
-        cursor: pointer;
         border: .375rem solid var(--blue);
         box-shadow: 0 0 8px var(--blue), inset 0 0 8px var(--blue);
         background-color: rgba(0, 0, 0, 0);
-
+        scale: 0.5;
     }
+
     100% {
         transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+        background-color: var(--white);
+        color: var(--blue);
     }
 }
 
