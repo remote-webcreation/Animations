@@ -48,7 +48,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10rem;
+        gap: 6rem;
         padding: 2rem;
         flex-wrap: wrap;
         .card-frame1, .card-frame2, .card-frame3 {
