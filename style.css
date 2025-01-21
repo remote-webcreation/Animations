@@ -40,7 +40,7 @@ main {
     height: 100vh;
     padding: 1.875rem;
     gap: 1.875rem;
-    h3 {
+    h2 {
         margin: 0;
         padding: 0;
     }
@@ -51,9 +51,11 @@ main {
         gap: 10rem;
         padding: 2rem;
         .card-frame1, .card-frame2, .card-frame3 {
+            justify-content: center;
+            text-align: center;
             background-color: var(--blue);
-            width: auto;
-            height: fit-content;
+            width: 9.375rem;
+            height: 9.375rem;
             padding:  2.5rem 2rem;
             border-radius: .5rem;
         }
