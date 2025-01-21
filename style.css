@@ -82,6 +82,9 @@ main {
     animation-delay: 5s;
     animation-iteration-count: 1;
     animation-direction: reverse;
+    &:hover {
+        animation-play-state: paused;
+    }
 }
 
 
