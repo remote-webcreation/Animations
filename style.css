@@ -93,6 +93,13 @@ main {
     }
 }
 
+.card-frame3 {
+    animation: 2s spin ease-in-out 8s infinite alternate;
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+
 
 
 /* -----  Keyframes ----- */
