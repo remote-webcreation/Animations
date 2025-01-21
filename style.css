@@ -63,7 +63,10 @@ main {
 .card-frame1 {
     animation-duration: 3s;
     animation-name: spin;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease;
+    animation-delay: 2s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
 }
 
 
