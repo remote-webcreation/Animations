@@ -1,7 +1,8 @@
 :root {
-    --primary-color: rgb(82, 77, 77);
+    --primary-color: rgb(51, 51, 51);
     --secondary-color: rgb(136, 130, 130);
     --white: rgb(248, 241, 241);
+    --blue: rgb(16, 43, 254);
 }
 
 * {
@@ -18,11 +19,47 @@ body, html {
 body {
     background-color: var(--primary-color);
     font-size: 1rem;
-    padding: 1.875rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: rgb(39, 37, 37);
+    margin: 0;
+    padding: .5rem 3rem;
+}
+
+main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 1.875rem;
+    gap: 1.875rem;
+    h3 {
+        margin: 0;
+        padding: 0;
+    }
+    .Test-Animations {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        .card-frame1, .card-frame2, .card-frame3 {
+            background-color: var(--blue);
+            width: auto;
+            height: fit-content;
+            padding:  2.5rem 2rem;
+            /* border-radius: .5rem; */
+        }
+   
+    }
 }
+
+
 
 
