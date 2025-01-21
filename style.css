@@ -72,12 +72,16 @@ main {
     animation-delay: 2s;
     animation-iteration-count: 1;
     animation-direction: normal;
+    &:hover {
+        animation-play-state: paused;
+        cursor: pointer;
+    }
 }
 
 /* spin circle on 50% */
 
 .card-frame2 {
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-name: spincolor;
     animation-delay: 5s;
     animation-timing-function: ease-in-out;
@@ -115,12 +119,14 @@ main {
 @keyframes spincolor {
     0% {
         color: var(--white);
+        cursor: pointer;
     }
     50% {
         background-color: var(--white);
         color: var(--secondary-color);
         border-radius: 25%;
         scale: 1.25;
+        cursor: pointer;
     }
     100% {
         background-color: var(--header-black);
