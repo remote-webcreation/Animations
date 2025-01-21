@@ -3,6 +3,7 @@
     --secondary-color: rgb(136, 130, 130);
     --white: rgb(248, 241, 241);
     --blue: rgb(16, 43, 254);
+    --header-black: rgb(39, 37, 37);
 }
 
 * {
@@ -27,7 +28,7 @@ body {
 header {
     width: 100%;
     height: auto;
-    background-color: rgb(39, 37, 37);
+    background-color:var(--header-black);
     margin: 0;
     padding: .5rem 3rem;
 }
@@ -71,9 +72,19 @@ main {
     animation-direction: normal;
 }
 
+/* spin circle on 50% */
+
+.card-frame2 {
+    animation-duration: 3s;
+    animation-name: spincolor;
+    animation-delay: 5s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+}
 
 
-/* KEYFRAMES */
+
+/* -----  Keyframes ----- */
 
 
 /* .card-frame1 */
@@ -90,6 +101,21 @@ main {
     100% {
         transform: rotate(360deg);
         scale: 1;
+    }
+}
+
+/* .card-frame2 */
+
+@keyframes spincolor {
+    0% {
+        color: var(--white);
+    }
+    50% {
+        background-color: var(--white);
+        color: var(--secondary-color);
+    }
+    100% {
+        background-color: var(--header-black);
     }
 }
 
