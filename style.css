@@ -151,14 +151,23 @@ main {
 @keyframes loading {
     0% {
         transform: rotateX(0deg) rotateY(0) rotateZ(0);
+        cursor: pointer;
     }
     33% {
         transform: rotateX(180deg) rotateY(0) rotateZ(0);
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0);
     }
     67% {
         transform: rotateX(180deg) rotateY(180deg) rotateZ(0);
+        cursor: pointer;
+        border: .375rem solid var(--blue);
+        box-shadow: 0 0 8px var(--blue), 0 0 8px var(--blue);
+        background-color: rgba(0, 0, 0, 0);
+
     }
     100% {
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
     }
 }
 
