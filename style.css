@@ -3,6 +3,7 @@
     --secondary-color: rgb(136, 130, 130);
     --white: rgb(248, 241, 241);
     --blue: rgb(16, 43, 254);
+    --header-black: rgb(39, 37, 37);
 }
 
 * {
@@ -27,7 +28,7 @@ body {
 header {
     width: 100%;
     height: auto;
-    background-color: rgb(39, 37, 37);
+    background-color:var(--header-black);
     margin: 0;
     padding: .5rem 3rem;
 }
@@ -39,7 +40,7 @@ main {
     height: 100vh;
     padding: 1.875rem;
     gap: 1.875rem;
-    h3 {
+    h2 {
         margin: 0;
         padding: 0;
     }
@@ -50,9 +51,11 @@ main {
         gap: 10rem;
         padding: 2rem;
         .card-frame1, .card-frame2, .card-frame3 {
+            justify-content: center;
+            text-align: center;
             background-color: var(--blue);
-            width: auto;
-            height: fit-content;
+            width: 9.375rem;
+            height: 9.375rem;
             padding:  2.5rem 2rem;
             border-radius: .5rem;
         }
@@ -69,11 +72,29 @@ main {
     animation-delay: 2s;
     animation-iteration-count: 1;
     animation-direction: normal;
+    &:hover {
+        animation-play-state: paused;
+        cursor: pointer;
+    }
+}
+
+/* spin circle on 50% */
+
+.card-frame2 {
+    animation-duration: 3s;
+    animation-name: spincolor;
+    animation-delay: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    &:hover {
+        animation-play-state: paused;
+    }
 }
 
 
 
-/* KEYFRAMES */
+/* -----  Keyframes ----- */
 
 
 /* .card-frame1 */
@@ -89,6 +110,26 @@ main {
     }
     100% {
         transform: rotate(360deg);
+        scale: 1;
+    }
+}
+
+/* .card-frame2 */
+
+@keyframes spincolor {
+    0% {
+        color: var(--white);
+        cursor: pointer;
+    }
+    50% {
+        background-color: var(--white);
+        color: var(--secondary-color);
+        border-radius: 25%;
+        scale: 1.25;
+        cursor: pointer;
+    }
+    100% {
+        background-color: var(--header-black);
         scale: 1;
     }
 }
